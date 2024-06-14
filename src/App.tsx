@@ -1,11 +1,11 @@
 import Navbar from "@/scences/navbar"
-import { useEffect, useState } from "react"
-import { SelectedPage } from "./shared/types";
-import Home from "./scences/home";
+import Home from "@/scences/home";
 import Benefits from "@/scences/benefits";
 import OurClasses from "@/scences/ourClasses";
 import ContactUs from "@/scences/contactUs";
 import Footer from "@/scences/footer";
+import { useEffect, useState } from "react"
+import { SelectedPage } from "@/shared/types";
 enum SelectedPage{
   Home = "home",
   Benefits = "benefits",
@@ -41,7 +41,7 @@ useEffect(() => {
      <Benefits setSelectedPage={setSelectedPage}/>
      <OurClasses setSelectedPage={setSelectedPage}/>
      <ContactUs setSelectedPage={setSelectedPage}/>
-     <Footer setSelectedPage={setSelectedPage}/>
+     <Footer />
     </div>
   )
 }
